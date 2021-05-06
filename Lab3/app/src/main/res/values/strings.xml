@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">NvDuy_KTGK</string>
+
+    <string-array name="pet_animal">
+        <item>Phía sau một cô gái</item>
+        <item>Cho em gần anh thêm chút nữa</item>
+        <item>Điều anh biết</item>
+        <item>Yêu một người vô tâm</item>
+    </string-array>
+    <string-array name="animal">
+        <item>Soobin Hoàng Sơn</item>
+        <item>Hương Tràm</item>
+        <item>Chi Dân</item>
+        <item>Bảo Anh</item>
+    </string-array>
+    <string-array name="stt_animal">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+    </string-array>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Từ khóa"
+        android:textColor="@color/black"
+        android:labelFor="@+id/congvan"></TextView>
+    <EditText
+        android:id="@+id/congvan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back"
+        android:hint="Số công văn, Trích yếu"
+        android:padding="20dp"></EditText>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ngày cập nhật"
+        android:textColor="@color/black"
+        android:labelFor="@+id/congvan"></TextView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+            
+    </LinearLayout>
+
+</LinearLayout>
