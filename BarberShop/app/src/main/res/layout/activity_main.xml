@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/background_wood">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_menu"
@@ -13,7 +14,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:itemIconTint="#999999"
+        app:itemIconTint="#FFFFFF"
         app:itemTextColor="#FFFFFF"
-        app:menu="@layout/menu"/>
+        app:menu="@layout/menu"
+        android:background="#000000"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

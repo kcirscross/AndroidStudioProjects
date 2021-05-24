@@ -19,82 +19,82 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:background="@drawable/background_welcome">
+                android:background="@drawable/background_welcome"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="44dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginLeft="16dp"
+                    android:layout_marginTop="44dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginRight="16dp"
-                    android:textSize="40sp"
+                    android:fontFamily="@font/roboto_light"
                     android:gravity="center_horizontal"
                     android:text="@string/login"
                     android:textColor="#61512a"
-                    android:fontFamily="@font/roboto_light"/>
+                    android:textSize="40sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_horizontal"
-                    android:layout_marginTop="28dp"
                     android:layout_marginStart="27dp"
                     android:layout_marginLeft="27dp"
+                    android:layout_marginTop="28dp"
                     android:layout_marginEnd="26dp"
-                    android:layout_marginRight="26dp" >
+                    android:layout_marginRight="26dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="55dp"
-                        android:layout_height="55dp"
                         android:id="@+id/facebook_button"
-                        android:src="@drawable/btn_facebook"/>
-
-                    <ImageView
                         android:layout_width="55dp"
                         android:layout_height="55dp"
+                        android:src="@drawable/btn_facebook" />
+
+                    <ImageView
                         android:id="@+id/twitter_button"
-                        android:src="@drawable/btn_twitter"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
                         android:layout_marginStart="80dp"
-                        android:layout_marginLeft="80dp"/>
+                        android:layout_marginLeft="80dp"
+                        android:src="@drawable/btn_twitter" />
 
                 </LinearLayout>
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:layout_marginTop="30dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/div_or"/>
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/div_or" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginLeft="16dp"
+                    android:layout_marginTop="30dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginRight="16dp"
                     android:layout_marginBottom="28dp"
                     android:background="@drawable/button_border">
 
                     <EditText
+                        android:id="@+id/usename"
                         android:layout_width="fill_parent"
                         android:layout_height="56dp"
-                        android:id="@+id/usename"
-                        android:gravity="center_vertical"
                         android:layout_marginStart="16dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginEnd="16dp"
                         android:layout_marginRight="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center_vertical"
                         android:hint="@string/username"
-                        android:textColorHint="#696969"
-                        android:textSize="16sp"
                         android:textColor="#61512a"
-                        android:fontFamily="@font/roboto_regular"/>
+                        android:textColorHint="#696969"
+                        android:textSize="16sp" />
 
                 </RelativeLayout>
 
@@ -109,48 +109,48 @@
                     android:background="@drawable/button_border">
 
                     <EditText
+                        android:id="@+id/password"
                         android:layout_width="fill_parent"
                         android:layout_height="56dp"
-                        android:id="@+id/password"
-                        android:gravity="center_vertical"
                         android:layout_marginStart="16dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginEnd="16dp"
                         android:layout_marginRight="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center_vertical"
                         android:hint="@string/password"
                         android:inputType="textPassword"
-                        android:textColorHint="#696969"
-                        android:textSize="16sp"
                         android:textColor="#61512a"
-                        android:fontFamily="@font/roboto_regular"/>
+                        android:textColorHint="#696969"
+                        android:textSize="16sp" />
 
                 </RelativeLayout>
 
                 <Button
+                    android:id="@+id/login_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/login_button"
                     android:layout_marginStart="16dp"
                     android:layout_marginLeft="16dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginRight="16dp"
-                    android:gravity="center"
-                    android:textSize="14sp"
-                    android:textColor="#FFFFFF"
+                    android:background="@drawable/button_black"
                     android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
                     android:text="@string/login"
-                    android:background="@drawable/button_black"/>
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/reset_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/reset_password"
                     android:layout_marginTop="26dp"
-                    android:textColor="#61512a"
-                    android:textSize="14sp"
                     android:fontFamily="@font/roboto_regular"
                     android:gravity="center_horizontal"
-                    android:text="@string/reset_password" />
+                    android:text="@string/reset_password"
+                    android:textColor="#61512a"
+                    android:textSize="14sp" />
 
 
             </LinearLayout>
