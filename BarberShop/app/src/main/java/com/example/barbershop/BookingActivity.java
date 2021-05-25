@@ -15,20 +15,20 @@ public class BookingActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking);
-        InitView();
+        //InitView();
     }
-    public void InitView(){
-        RecyclerView recyclerview = (RecyclerView) findViewById(R.id.booking_recyclerview);
-        recyclerview.setHasFixedSize(true);
-        LinearLayoutManager layoutmanager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        recyclerview.setLayoutManager(layoutmanager);
-        ArrayList<Booking> booking = new ArrayList<>();
-        booking.add(new Booking("1", ""));
-        booking.add(new Booking("1", ""));
-        booking.add(new Booking("1", ""));
-        booking.add(new Booking("1", ""));
-        booking.add(new Booking("1", ""));
-        BookingAdapter bookingAdapter = new BookingAdapter(booking, getApplicationContext());
-        recyclerview.setAdapter(bookingAdapter);
-    }
+//    public void InitView(){
+//        RecyclerView recyclerview = (RecyclerView) findViewById(R.id.booking_recyclerview);
+//        recyclerview.setHasFixedSize(true);
+//        LinearLayoutManager layoutmanager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+//        recyclerview.setLayoutManager(layoutmanager);
+//        ArrayList<Booking> booking = new ArrayList<>();
+//        booking.add(new Booking("1", ""));
+//        booking.add(new Booking("1", ""));
+//        booking.add(new Booking("1", ""));
+//        booking.add(new Booking("1", ""));
+//        booking.add(new Booking("1", ""));
+//        BookingAdapter bookingAdapter = new BookingAdapter(booking, getApplicationContext());
+//        recyclerview.setAdapter(bookingAdapter);
+//    }
 }
