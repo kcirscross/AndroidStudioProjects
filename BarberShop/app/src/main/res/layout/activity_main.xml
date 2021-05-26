@@ -4,26 +4,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/background_wood">
+    android:background="@drawable/background_wood"
+    tools:context=".MainActivity">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#000000"
+        app:itemIconTint="#FFFFFF"
+        app:itemTextColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:itemIconTint="#FFFFFF"
-        app:itemTextColor="#FFFFFF"
-        app:menu="@layout/menu"
-        android:background="#000000"/>
+        app:menu="@layout/menu" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/btn_edit"
-        tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="183dp" />
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="99dp"
+        android:layout_height="92dp"
+        android:background="@drawable/botron_button"
+        android:drawableTop="@drawable/ic_baseline_content_cut_24"
+        android:text="Abour us"
+        android:textColor="#4A432B"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="79dp"
+        tools:layout_editor_absoluteY="98dp" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="101dp"
+        android:layout_height="94dp"
+        android:background="@drawable/botron_button"
+        android:drawableTop="@drawable/ic_baseline_location_on_24"
+        android:text="Location"
+        android:textColor="#4A432B"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="236dp"
+        tools:layout_editor_absoluteY="98dp" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="98dp"
+        android:layout_height="92dp"
+        android:background="@drawable/botron_button"
+        android:drawableTop="@drawable/ic_baseline_calendar_today_24"
+        android:text="Schedule"
+        android:textColor="#4A432B"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="217dp" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="100dp"
+        android:layout_height="94dp"
+        android:background="@drawable/botron_button"
+        android:drawableTop="@drawable/ic_baseline_shopping_basket_24"
+        android:text="Deals"
+        android:textColor="#4A432B"
+        tools:layout_editor_absoluteX="237dp"
+        tools:layout_editor_absoluteY="217dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
