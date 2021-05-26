@@ -20,52 +20,71 @@
         app:menu="@layout/menu" />
 
     <Button
-        android:id="@+id/button7"
-        android:layout_width="99dp"
-        android:layout_height="92dp"
-        android:background="@drawable/botron_button"
-        android:drawableTop="@drawable/ic_baseline_content_cut_24"
-        android:text="Abour us"
-        android:textColor="#4A432B"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="79dp"
-        tools:layout_editor_absoluteY="98dp" />
-
-    <Button
-        android:id="@+id/button8"
+        android:id="@+id/location_button"
         android:layout_width="101dp"
         android:layout_height="94dp"
+        android:layout_marginTop="192dp"
         android:background="@drawable/botron_button"
         android:drawableTop="@drawable/ic_baseline_location_on_24"
         android:text="Location"
         android:textColor="#4A432B"
         android:textSize="14sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="236dp"
-        tools:layout_editor_absoluteY="98dp" />
+        app:layout_constraintBottom_toTopOf="@+id/bottom_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.79"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.005" />
 
     <Button
-        android:id="@+id/button9"
-        android:layout_width="98dp"
-        android:layout_height="92dp"
+        android:id="@+id/deal_button"
+        android:layout_width="101dp"
+        android:layout_height="94dp"
+        android:layout_marginBottom="228dp"
+        android:background="@drawable/botron_button"
+        android:drawableTop="@drawable/ic_baseline_shopping_basket_24"
+        android:text="Deals"
+        android:textColor="#4A432B"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.79"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/datlich_button"
+        android:layout_width="101dp"
+        android:layout_height="94dp"
+        android:layout_marginBottom="232dp"
         android:background="@drawable/botron_button"
         android:drawableTop="@drawable/ic_baseline_calendar_today_24"
         android:text="Schedule"
         android:textColor="#4A432B"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="80dp"
-        tools:layout_editor_absoluteY="217dp" />
+        app:layout_constraintBottom_toTopOf="@+id/bottom_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.246"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/button10"
-        android:layout_width="100dp"
+        android:id="@+id/aboutus_button"
+        android:layout_width="101dp"
         android:layout_height="94dp"
         android:background="@drawable/botron_button"
-        android:drawableTop="@drawable/ic_baseline_shopping_basket_24"
-        android:text="Deals"
+        android:drawableTop="@drawable/ic_baseline_content_cut_24"
+        android:text="About us"
         android:textColor="#4A432B"
-        tools:layout_editor_absoluteX="237dp"
-        tools:layout_editor_absoluteY="217dp" />
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.243"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.336" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
