@@ -52,7 +52,8 @@
     <string name="signing">Signing in…</string>
     <string name="verify_email">Please, verify your email before login.</string>
     <string name="error_uploading_photo">Sorry, some error occured while loading your profile photo. Please, try again later.</string>
-
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 
 
 </resources>

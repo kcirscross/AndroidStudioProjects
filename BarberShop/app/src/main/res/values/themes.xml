@@ -24,12 +24,14 @@
     </style>
 
 
-    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert" >
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="android:buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
         <item name="android:buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
         <item name="colorPrimary">#000</item>
         <item name="colorPrimaryDark">#696969</item>
         <item name="colorAccent">#FF4081</item>
     </style>
+
+
 
 </resources>

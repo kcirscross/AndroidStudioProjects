@@ -13,6 +13,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DatabaseReference;
@@ -33,19 +35,29 @@ public class MainActivity extends AppCompatActivity {
 //        DatabaseReference myRef = database.getReference("message");
 //        myRef.setValue("Hello, World!");
 //        mData = FirebaseDatabase.getInstance().getReference();
+
+        Button location = findViewById(R.id.location_button);
+        location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MapActivity.class);
+                startActivity(intent);
+            }
+        });
+
         BottomNavigationView menu = (BottomNavigationView) findViewById(R.id.bottom_menu);
-        Intent intent1 = new Intent(this, BookingActivity.class);
+
         menu.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.home:
-                        Intent intent = new Intent(null, MainActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(intent);
                         return true;
 
                     case R.id.booking:
-
+                        Intent intent1 = new Intent(getApplicationContext(), BookingActivity.class);
                         startActivity(intent1);
                         return true;
                 }
