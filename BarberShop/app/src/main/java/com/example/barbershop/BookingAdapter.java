@@ -4,45 +4,53 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
+public class BookingAdapter extends BaseAdapter {
 
-public class BookingAdapter extends RecyclerView.Adapter<BookingAdapter.ViewHolder> {
-    ArrayList<Booking> dataBooking;
-    Context context;
+    private Context context;
+    private int layout;
+    private List<Booking> arraylist;
 
-    public BookingAdapter(ArrayList<Booking> dataBooking, Context context) {
-        this.dataBooking = dataBooking;
+    public BookingAdapter(Context context, int layout, List<Booking> arraylist) {
         this.context = context;
-    }
-
-    @NonNull
-    @Override
-    public BookingAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View itemView = layoutInflater.inflate(R.layout.booking_button,parent,false);
-        return new BookingAdapter.ViewHolder(itemView);
+        this.layout = layout;
+        this.arraylist = arraylist;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull BookingAdapter.ViewHolder holder, int position) {
-        holder.booking_button.setText(dataBooking.get(position).getBooking_time());
+    public int getCount() {
+        return arraylist.size();
     }
 
     @Override
-    public int getItemCount() {
-        return dataBooking.size();
+    public Object getItem(int position) {
+        return null;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
-        Button booking_button;
-        public ViewHolder(@NonNull View itemView) {
-            super(itemView);
-            booking_button = (Button) itemView.findViewById(R.id.booking_button);
-        }
+    @Override
+    public long getItemId(int position) {
+        return 0;
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+convertView = inflater.inflate(layout,null);
+Booking booking = arraylist.get(position);
+
+Button button1 = convertView.findViewById(R.id.button1);
+Button button2 = convertView.findViewById(R.id.button2);
+
+button1.setText(booking.getBooking_day());
+button2.setText(booking.getBooking_time());
+        return convertView;
     }
 }
+

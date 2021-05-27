@@ -3,11 +3,8 @@ package com.example.barbershop;
 import java.util.Date;
 
 public class Booking {
-    String booking_time;
-    String booking_day;
-
-    public Booking() {
-    }
+    private String booking_time;
+    private String booking_day;
 
     public Booking(String booking_time, String booking_day) {
         this.booking_time = booking_time;
