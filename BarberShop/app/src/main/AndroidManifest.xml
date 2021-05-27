@@ -50,6 +50,9 @@
         <activity
             android:name=".MapActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Booking1Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

@@ -15,6 +15,7 @@
             android:textColor="@color/black"
             android:textSize="14dp"
             android:textStyle="bold"
+            android:text=""
             android:background="@drawable/botron_button">
         </Button>
     </LinearLayout>

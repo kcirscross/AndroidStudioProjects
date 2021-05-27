@@ -26,7 +26,7 @@ public class BookingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_booking);
+        //setContentView(R.layout.activity_booking);
         addMenu();
 
         for(int i=1; i<10; i++){
@@ -35,8 +35,8 @@ public class BookingActivity extends AppCompatActivity {
         }
 
         ListView listView;
-        ArrayList<Booking> arrayList;
-        BookingAdapter adapter;
+        //ArrayList<Booking> arrayList;
+        //BookingAdapter adapter;
 //        listView = findViewById(R.id.listviewbooking);
 //        arrayList = new ArrayList<>();
 //        arrayList.add(new Booking("9:00", "Fri 30 Aug"));
