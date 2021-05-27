@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                         return true;
 
                     case R.id.booking:
-                        Intent intent1 = new Intent(getApplicationContext(), BookingActivity.class);
+                        Intent intent1 = new Intent(getApplicationContext(), Booking1Activity.class);
                         startActivity(intent1);
                         return true;
                 }

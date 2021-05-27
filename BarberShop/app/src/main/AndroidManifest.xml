@@ -48,9 +48,6 @@
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".BookingActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".MapActivity"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
