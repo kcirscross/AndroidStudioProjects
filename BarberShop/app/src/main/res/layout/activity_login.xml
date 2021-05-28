@@ -47,18 +47,11 @@
                     android:gravity="center_horizontal"
                     android:orientation="horizontal">
 
-                    <com.facebook.login.widget.LoginButton
-                        android:id="@+id/facebook_button"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/facebook_icon_png" />
-                    <Button
+
+                    <com.google.android.gms.common.SignInButton
                         android:id="@+id/google_button"
-                        android:layout_width="55dp"
-                        android:layout_height="55dp"
-                        android:layout_marginStart="80dp"
-                        android:layout_marginLeft="80dp"
-                        android:background="@drawable/google_icon_png_12" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"></com.google.android.gms.common.SignInButton>
 
                 </LinearLayout>
 
