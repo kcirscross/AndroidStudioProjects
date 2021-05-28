@@ -57,7 +57,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                 .title("294/43 Điện Biên Phủ, Đà Nẵng"));
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(Vietnam));
         googleMap.getFocusedBuilding();
-        googleMap.animateCamera(CameraUpdateFactory.zoomTo( 18.0f ));
+        googleMap.animateCamera(CameraUpdateFactory.zoomTo( 10.0f ));
     }
 
 }

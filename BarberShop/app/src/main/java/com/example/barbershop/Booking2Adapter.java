@@ -11,11 +11,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class Booking1Adapter extends RecyclerView.Adapter<Booking1Adapter.Booking1ViewHolder> {
+public class Booking2Adapter extends RecyclerView.Adapter<Booking2Adapter.Booking1ViewHolder> {
     Context mContext;
     ArrayList<Booking1> list;
     RecyclerViewClickInterface recyclerViewClickInterface;
-    public Booking1Adapter(Context mContext, ArrayList<Booking1> list, RecyclerViewClickInterface recyclerViewClickInterface) {
+    public Booking2Adapter(Context mContext, ArrayList<Booking1> list, RecyclerViewClickInterface recyclerViewClickInterface) {
         this.list = list;
         this.mContext = mContext;
         this.recyclerViewClickInterface = recyclerViewClickInterface;
@@ -36,7 +36,7 @@ public class Booking1Adapter extends RecyclerView.Adapter<Booking1Adapter.Bookin
         holder.buttonDay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                recyclerViewClickInterface.onItemClick(position);
+                recyclerViewClickInterface.onItemClick2(position);
             }
         });
     }
