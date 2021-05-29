@@ -11,6 +11,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -18,8 +19,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.database.annotations.NotNull;
 
 import java.text.SimpleDateFormat;
@@ -35,7 +40,7 @@ public class Booking1Activity extends AppCompatActivity implements RecyclerViewC
     ArrayList<Booking1> list = new ArrayList<>();
     ArrayList<Booking1> list1 = new ArrayList<>();
     String days, hours;
-    private DatabaseReference mDatabase;
+    DatabaseReference mDatabase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,14 +48,26 @@ public class Booking1Activity extends AppCompatActivity implements RecyclerViewC
         addDaysList();
         addHoursList();
         mDatabase = FirebaseDatabase.getInstance().getReference();
+        mDatabase.child("Schedule").child("05-06-2021").child("19:00").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot snapshot) {
+                if(snapshot.getChildrenCount() == 2){
+                    Toast.makeText(Booking1Activity.this, "hahaa", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+
+            }
+        });
         GoogleSignInAccount lastAccount = GoogleSignIn.getLastSignedInAccount(getApplicationContext());
         Button confirm = findViewById(R.id.confirm_button);
         confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String scheduleID = mDatabase.push().getKey();
                 ScheduleInformation si = new ScheduleInformation(lastAccount.getEmail(), lastAccount.getDisplayName());
-                mDatabase.child("Schedule").child(days).child(hours).child(scheduleID).setValue(si);
+                mDatabase.child("Schedule").child(days).child(hours).child(mDatabase.push().getKey()).setValue(si);
             }
         });
 
@@ -76,6 +93,7 @@ public class Booking1Activity extends AppCompatActivity implements RecyclerViewC
         time.set(Calendar.HOUR_OF_DAY, 9);
         time.set(Calendar.MINUTE, 30);
         SimpleDateFormat hoursFormat = new SimpleDateFormat("HH:mm");
+
         for(int i = 0; i <= 19; i++){
             time.add(Calendar.MINUTE, 30);
             list1.add(new Booking1(""+hoursFormat.format(time.getTime())));

@@ -9,6 +9,12 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 
 public class Booking2Adapter extends RecyclerView.Adapter<Booking2Adapter.Booking1ViewHolder> {
@@ -33,6 +39,9 @@ public class Booking2Adapter extends RecyclerView.Adapter<Booking2Adapter.Bookin
     public void onBindViewHolder(@NonNull Booking1ViewHolder holder, int position) {
         Booking1 booking1 = list.get(position);
         holder.buttonDay.setText(booking1.getDay());
+
+
+
         holder.buttonDay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
