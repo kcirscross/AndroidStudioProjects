@@ -47,7 +47,7 @@
             android:textColor="#FFFF"
             android:background="@drawable/button_black"
             android:fontFamily="@font/roboto_medium"
-            android:text="@string/ok" />
+            android:text="Xác nhận" />
 
     </LinearLayout>
 

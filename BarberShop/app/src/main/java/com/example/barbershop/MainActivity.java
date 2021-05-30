@@ -45,13 +45,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         Button logout = findViewById(R.id.logout_button);
-        if(lastAccount != null){
-            logout.setText(""+lastAccount.getDisplayName());
-        }
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
+            }
+        });
+        Button profile = findViewById(R.id.profile_button);
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
+                startActivity(intent);
             }
         });
 

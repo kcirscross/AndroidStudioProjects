@@ -48,26 +48,27 @@ public class Booking1Activity extends AppCompatActivity implements RecyclerViewC
         addDaysList();
         addHoursList();
         mDatabase = FirebaseDatabase.getInstance().getReference();
-        mDatabase.child("Schedule").child("05-06-2021").child("19:00").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot snapshot) {
-                if(snapshot.getChildrenCount() == 2){
-                    Toast.makeText(Booking1Activity.this, "hahaa", Toast.LENGTH_SHORT).show();
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError error) {
-
-            }
-        });
+//        mDatabase.child("Schedule").child("05-06-2021").child("19:00").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot snapshot) {
+//                if(snapshot.getChildrenCount() == 2){
+//                    Toast.makeText(Booking1Activity.this, "hahaa", Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError error) {
+//
+//            }
+//        });
         GoogleSignInAccount lastAccount = GoogleSignIn.getLastSignedInAccount(getApplicationContext());
         Button confirm = findViewById(R.id.confirm_button);
         confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ScheduleInformation si = new ScheduleInformation(lastAccount.getEmail(), lastAccount.getDisplayName());
-                mDatabase.child("Schedule").child(days).child(hours).child(mDatabase.push().getKey()).setValue(si);
+                ScheduleInformation si = new ScheduleInformation(lastAccount.getEmail(), lastAccount.getDisplayName(), days, hours);
+                mDatabase.child("Schedule").child(mDatabase.push().getKey()).setValue(si);
+                Toast.makeText(Booking1Activity.this, "Đặt lịch thành công! Xin hãy đến đúng giờ nha :D", Toast.LENGTH_SHORT).show();
             }
         });
 
