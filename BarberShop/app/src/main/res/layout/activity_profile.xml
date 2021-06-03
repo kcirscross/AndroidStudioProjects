@@ -36,26 +36,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Public account"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/display_name" />
 
-    <EditText
-        android:layout_width="291dp"
-        android:layout_height="216dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        android:autofillHints="asd" />
-
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="36dp"
         android:background="@drawable/botron_button"
         android:text="Quay lại"
         android:textColor="@color/black"
@@ -63,4 +54,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.854"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ListView
+        android:padding="20dp"
+        android:id="@+id/profile_list_menu"
+        android:layout_width="409dp"
+        android:layout_height="295dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 </androidx.constraintlayout.widget.ConstraintLayout>

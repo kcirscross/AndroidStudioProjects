@@ -53,7 +53,9 @@
         <activity
             android:name=".ProfileActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-
+        <activity
+            android:name=".HistoryBookingActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
