@@ -86,7 +86,7 @@ public class Booking1Activity extends AppCompatActivity implements RecyclerViewC
         revBooking1 = findViewById(R.id.list1);
         booking1Adapter = new Booking1Adapter(getApplicationContext(), list, this);
         revBooking1.setAdapter(booking1Adapter);
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 4);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 3);
         revBooking1.setLayoutManager(gridLayoutManager);
     }
     public void addHoursList(){

@@ -49,8 +49,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
+                Intent intent23 = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent23);
             }
         });
+
+        Button datlich_button = findViewById(R.id.datlich_button);
+        datlich_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(getApplicationContext(), Booking1Activity.class);
+                startActivity(intent1);
+            }
+        });
+
+
         Button profile = findViewById(R.id.profile_button);
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
